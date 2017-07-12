@@ -1,0 +1,11 @@
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Models\bin\Debug\Models.dll
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Models\bin\Debug\Models.pdb
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Models\obj\Debug\Models.dll
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Models\obj\Debug\Models.pdb
+D:\Projects\MvcEf5\Models\bin\Debug\Models.dll
+D:\Projects\MvcEf5\Models\bin\Debug\Models.pdb
+D:\Projects\MvcEf5\Models\bin\Debug\EntityFramework.dll
+D:\Projects\MvcEf5\Models\bin\Debug\EntityFramework.xml
+D:\Projects\MvcEf5\Models\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\Projects\MvcEf5\Models\obj\Debug\Models.dll
+D:\Projects\MvcEf5\Models\obj\Debug\Models.pdb

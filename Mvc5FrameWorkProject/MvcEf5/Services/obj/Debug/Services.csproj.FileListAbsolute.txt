@@ -1,0 +1,37 @@
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Services\bin\Debug\Services.dll
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Services\bin\Debug\Services.pdb
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Services\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Services\bin\Debug\Models.dll
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Services\bin\Debug\Response.dll
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Services\bin\Debug\Models.pdb
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Services\bin\Debug\Response.pdb
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Services\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Services\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Services\obj\Debug\Services.dll
+C:\Users\Administrator\documents\visual studio 2013\Projects\MvcEf5\Services\obj\Debug\Services.pdb
+D:\Projects\MvcEf5\Services\bin\Debug\Services.dll
+D:\Projects\MvcEf5\Services\bin\Debug\Services.pdb
+D:\Projects\MvcEf5\Services\bin\Debug\EntityFramework.dll
+D:\Projects\MvcEf5\Services\bin\Debug\Enums.dll
+D:\Projects\MvcEf5\Services\bin\Debug\Models.dll
+D:\Projects\MvcEf5\Services\bin\Debug\Response.dll
+D:\Projects\MvcEf5\Services\bin\Debug\System.Web.Http.dll
+D:\Projects\MvcEf5\Services\bin\Debug\StackExchange.Redis.StrongName.dll
+D:\Projects\MvcEf5\Services\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\MvcEf5\Services\bin\Debug\System.Net.Http.Formatting.dll
+D:\Projects\MvcEf5\Services\bin\Debug\Enums.pdb
+D:\Projects\MvcEf5\Services\bin\Debug\Models.pdb
+D:\Projects\MvcEf5\Services\bin\Debug\Response.pdb
+D:\Projects\MvcEf5\Services\bin\Debug\EntityFramework.xml
+D:\Projects\MvcEf5\Services\bin\Debug\System.Web.Http.xml
+D:\Projects\MvcEf5\Services\bin\Debug\StackExchange.Redis.StrongName.pdb
+D:\Projects\MvcEf5\Services\bin\Debug\StackExchange.Redis.StrongName.xml
+D:\Projects\MvcEf5\Services\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\MvcEf5\Services\bin\Debug\System.Net.Http.Formatting.xml
+D:\Projects\MvcEf5\Services\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\Projects\MvcEf5\Services\bin\Debug\zh-Hans\System.Web.Http.resources.dll
+D:\Projects\MvcEf5\Services\bin\Debug\zh-Hans\System.Net.Http.Formatting.resources.dll
+D:\Projects\MvcEf5\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+D:\Projects\MvcEf5\Services\obj\Debug\Services.dll
+D:\Projects\MvcEf5\Services\obj\Debug\Services.pdb

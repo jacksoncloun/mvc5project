@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+}
+
+<script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.js"></script>
+
+<input type="text" value="" id="gourl" />
+<h4>hello this is： <a id="ahref" href="/wechat/gotopc" onclick="javascript: go();">去pc控制器</a> </h4>
+<script>
+    function go() {
+        var vals = $("#gourl").val();
+        var ahref = $("#ahref");
+        if (vals == "") {
+            window.location.href = ahref.attr("href");
+        }
+        else {
+            window.location.href = ahref.attr("href") + "?url=" + vals.value;
+        }
+    }
+</script>
+
