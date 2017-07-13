@@ -44,11 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bll\ClassReturn.cs" />
     <Compile Include="Bll\LoginServices.cs" />
     <Compile Include="Bll\RedisService.cs" />
     <Compile Include="Bll\WebSession.cs" />
     <Compile Include="Bll\UserServices.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="GenericT.cs" />
     <Compile Include="IBll\ILoginServices.cs" />
     <Compile Include="IBll\IRedisService.cs" />
     <Compile Include="IBll\IUserServices.cs" />

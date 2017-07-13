@@ -106,16 +106,6 @@ namespace Response.Redis
 
         #endregion
 
-        #region 读取单个Key的value值并以数组如List<string>的形式返回
-        //public List<T> GetListKey<T>(string key)
-        //{
-
-        //    //db.HashGetAll()
-        //}
-        #endregion
-
-
-
 
         #region Hash
 
@@ -134,7 +124,7 @@ namespace Response.Redis
                 string json = JsonConvert.SerializeObject(item);
                 listHashEntry.Add(new HashEntry(getModelId(item), json));
             }
-            
+
             db.HashSet(key, listHashEntry.ToArray());
         }
 

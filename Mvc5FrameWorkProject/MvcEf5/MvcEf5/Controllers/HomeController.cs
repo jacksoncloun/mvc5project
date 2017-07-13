@@ -14,7 +14,7 @@ using System.Web.Mvc;
 
 namespace MvcEf5.Controllers
 {
-    //[SupportFilterAttribute]
+    //[SupportFilterAttribute]   //验证权限
     public class HomeController : BaseController
     {
         IUserServices _userServices;
@@ -23,23 +23,21 @@ namespace MvcEf5.Controllers
         {
             _userServices = new UserServices();
             _redisService = new RedisService();
-            //_redisService.SaveInRedis();
+            _redisService.SaveInRedis();
         }
 
         public ActionResult Index()
         {
-            _redisService.SaveInRedis();
-            RedisValue lister = RedisHelper.GetStringKey("Users");
-            List<Users> model = _userServices.getAlluser();
+            List<Users> model = RedisHelper.GetHashAll<Users>("Users");
             return View(model);
         }
         public ActionResult Clear()
         {
             WebSession.SessionClear();
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
         public ActionResult About()
-        {            
+        {
             ViewBag.Message = "Your application description page.";
 
             return View();
@@ -50,6 +48,6 @@ namespace MvcEf5.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
-        }        
+        }
     }
 }

@@ -3,8 +3,10 @@ using Response;
 using Response.Redis;
 using Services.IBll;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,65 +23,54 @@ namespace Services.Bll
             }
         }
 
+        /// <summary>
+        /// 缓存Users表到redis数据库
+        /// </summary>
         public void SaveInRedis()
         {
             RedisHelper.KeyDelete("Users");
             bool listusers = RedisHelper.KeyExists("Users");
             if (!listusers)
             {
+                //UsersInredis(); RolesInredis();
                 List<Users> users = _db.Users.ToList();
-                //RedisHelper.SetStringKey("Users", users);
+                Inredis<Users>(users, "Users");
 
-                Func<Users, string> arr = new Func<Users, string>(getfun);
-                RedisHelper.HashSet<Users>("Users", users, arr);
+                List<Roles> Roles = _db.Roles.ToList();
+                Inredis<Roles>(Roles, "Roles");
             }
         }
 
-        public string getfun(Users entity)
+
+        public void Inredis<T>(List<T> users, string key)
         {
-            return "Users-Id-" + entity.id.ToString();//"Users11";
+            Func<T, string> arr = new Func<T, string>(getfuncommon);
+            RedisHelper.HashSet<T>(key, users, arr);
         }
-
-
-
-        private delegate string Say(string b);
-        public static string SayHello1(string a)
+        public string getfuncommon<T>(T entity)
         {
-            return "Hello" + a;
+            return (entity.GetType()).BaseType.Name + "-Id-" + getPropertyvalue<T>(entity, "id");
         }
-        public void Main1()
+        /// <summary>
+        /// 泛型方法,通过反射获取实体类中的某个字段的值
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="entity"></param>
+        /// <param name="membername"></param>
+        /// <returns></returns>
+        public string getPropertyvalue<T>(T entity, string membername)
         {
-            Say say = SayHello1;
-            var str = say("d");
-        }
+            Type type = entity.GetType();//typeof(T)
 
+            PropertyInfo property = type.GetProperty(membername);
 
+            if (property == null) return string.Empty;
 
+            object o = property.GetValue(entity, null);
 
+            if (o == null) return string.Empty;
 
-
-        public static string SayHello2()
-        {
-            return "Hello";
-        }
-        public void Main2()
-        {
-            Func<string> say = SayHello2;
-            var d = say();
-        }
-
-
-
-
-
-        public static string SayHello3(string str)
-        {
-            return str + str;
-        }
-        public void Main3()
-        {
-            Func<string, string> say = SayHello3;
-            string str = say("abc");
+            return o.ToString();
         }
     }
 }

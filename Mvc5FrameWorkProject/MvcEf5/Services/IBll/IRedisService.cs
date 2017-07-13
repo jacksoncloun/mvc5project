@@ -9,6 +9,9 @@ namespace Services.IBll
 {
     public interface IRedisService
     {
+        /// <summary>
+        /// 缓存Users表到redis数据库
+        /// </summary>
         void SaveInRedis();
     }
 }
