@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseInterface\IEntityMapper.cs" />
+    <Compile Include="BaseList.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Loger.cs" />
     <Compile Include="LoginResult.cs" />

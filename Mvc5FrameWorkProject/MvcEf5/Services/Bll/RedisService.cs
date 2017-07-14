@@ -28,16 +28,17 @@ namespace Services.Bll
         /// </summary>
         public void SaveInRedis()
         {
-            RedisHelper.KeyDelete("Users");
             bool listusers = RedisHelper.KeyExists("Users");
             if (!listusers)
             {
+                RedisHelper.KeyDelete("Users");
+                RedisHelper.KeyDelete("Roles");
                 //UsersInredis(); RolesInredis();
                 List<Users> users = _db.Users.ToList();
                 Inredis<Users>(users, "Users");
 
                 List<Roles> Roles = _db.Roles.ToList();
-                Inredis<Roles>(Roles, "Roles");
+                Inredis<Roles>(Roles, "Roles");              
             }
         }
 

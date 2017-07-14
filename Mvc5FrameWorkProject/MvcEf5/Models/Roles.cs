@@ -9,7 +9,7 @@ namespace Models
     /// <summary>
     /// 角色表
     /// </summary>
-    public class Roles
+    public class Roles : BaseList
     {
         public int id { get; set; }
         public string rolename { get; set; }
@@ -17,6 +17,22 @@ namespace Models
         public bool isdelete { get; set; }
         public int? proleid { get; set; }
         public int? roleleavel { get; set; }
+
+        public string Text
+        {
+            get 
+            {
+                return rolename;
+            }
+        }
+        public int Value
+        {
+            get
+            {
+                return id;
+            }
+        }
+
         //public Users Users { get; set; }
 
         /// <summary>

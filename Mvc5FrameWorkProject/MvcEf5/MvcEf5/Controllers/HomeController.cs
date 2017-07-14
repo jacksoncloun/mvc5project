@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using Enums;
+using Models;
 using MvcEf5.Filter;
 using Newtonsoft.Json;
 using Response;
@@ -28,7 +29,7 @@ namespace MvcEf5.Controllers
 
         public ActionResult Index()
         {
-            List<Users> model = RedisHelper.GetHashAll<Users>("Users");
+            List<Users> model = RedisHelper.HashGetAll<Users>("Users");
             return View(model);
         }
         public ActionResult Clear()
@@ -36,6 +37,45 @@ namespace MvcEf5.Controllers
             WebSession.SessionClear();
             return RedirectToAction("Index", "Home");
         }
+
+
+        public ActionResult Edit(string N, int id)
+        {
+            EntitiesNames en = new EntitiesNames();
+            N = getClassNames<EntitiesNames>(N, en);
+            if (N != "")
+            {
+                var model = RedisHelper.GetHashKey<Users>(N, N + "-Id-" + id.ToString());
+                return View(model);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Error");
+            }
+        }
+        [HttpPost]
+        public ActionResult Edit(FormCollection entity)
+        {
+            //string[] keys = entity.AllKeys;
+            //Users u = new Users();
+            //u.id = (int)keys["id"];
+
+
+            return Json(new { Success = true });
+        }
+        public ActionResult Del(string N, int id)
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Del(FormCollection entity)
+        {
+            return Json(new { Success = true });
+        }
+
+
+
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

@@ -177,6 +177,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\DeaultController.cs" />
     <Compile Include="Controllers\DemoController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Filter\SupportFilterAttribute.cs" />
@@ -5905,6 +5906,8 @@
     <Content Include="Views\Demo\Edit.cshtml" />
     <Content Include="Views\Deault\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -5934,6 +5937,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Enums\Enums.csproj">
+      <Project>{c2938c29-af93-4c27-9a3f-9920ec85673e}</Project>
+      <Name>Enums</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{f539dbdd-6652-4731-a545-08888bf11b93}</Project>
       <Name>Models</Name>

@@ -3,3 +3,8 @@ D:\Projects\MvcEf5\Enums\bin\Debug\Enums.pdb
 D:\Projects\MvcEf5\Enums\obj\Debug\Enums.csprojResolveAssemblyReference.cache
 D:\Projects\MvcEf5\Enums\obj\Debug\Enums.dll
 D:\Projects\MvcEf5\Enums\obj\Debug\Enums.pdb
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Enums\bin\Debug\Enums.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Enums\bin\Debug\Enums.pdb
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Enums\obj\Debug\Enums.csprojResolveAssemblyReference.cache
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Enums\obj\Debug\Enums.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Enums\obj\Debug\Enums.pdb
