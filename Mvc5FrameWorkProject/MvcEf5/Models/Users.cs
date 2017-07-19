@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Users
+    public partial class Users
     {
-        private ICollection<Roles> _roles;
+        //private ICollection<Roles> _roles;
         public Users()
         { }
 
@@ -23,10 +23,10 @@ namespace Models
         /// <summary>
         /// 获取或设置用户所对应的权限的集合
         /// </summary>
-        public virtual ICollection<Roles> Roles
-        {
-            get { return _roles ?? (_roles = new List<Roles>()); }
-            protected set { _roles = value; }
-        }
+        //public virtual ICollection<Roles> Roles
+        //{
+        //    get { return _roles ?? (_roles = new List<Roles>()); }
+        //    protected set { _roles = value; }
+        //}
     }
 }

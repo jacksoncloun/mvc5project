@@ -10,5 +10,7 @@ namespace Services.IBll
     public interface IUserServices
     {
         List<Users> getAlluser();
+        void UpdateUser(Users entity);
+        Users GetUserById(int id);
     }
 }

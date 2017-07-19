@@ -147,6 +147,26 @@ namespace Response.Redis
             }
             return default(T);
         }
+        /// <summary>
+        /// 获取Hash中的单个key的值
+        /// </summary>
+        /// <typeparam name="T">需要修改这个对象</typeparam>
+        /// <param name="key">需要修改的key值</param>
+        /// <param name="hasFildValue">key值下面的list对应的hasFildValue值</param>
+        /// <param name="entity">修改为新的对象</param>
+        /// <returns></returns>
+        public static bool SetHashKey<T>(string key, string hasFildValue, T entity)
+        {
+            if (!string.IsNullOrWhiteSpace(key) && !string.IsNullOrWhiteSpace(hasFildValue))
+            {
+                string json = JsonConvert.SerializeObject(entity);
+                bool value = db.HashSet(key, hasFildValue, json);
+                return value;
+            }
+            return false;
+        }
+
+
 
         /// <summary>
         /// 获取hash中的多个key的值

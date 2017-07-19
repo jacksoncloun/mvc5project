@@ -23,6 +23,7 @@ D:\Projects\MvcEf5\Response\bin\Debug\zh-Hans\EntityFramework.resources.dll
 D:\Projects\MvcEf5\Response\obj\Debug\Response.csprojResolveAssemblyReference.cache
 D:\Projects\MvcEf5\Response\obj\Debug\Response.dll
 D:\Projects\MvcEf5\Response\obj\Debug\Response.pdb
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Debug\EntityFramework.xml
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Debug\Response.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Debug\Response.pdb
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Debug\EntityFramework.dll
@@ -30,7 +31,6 @@ D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Debug\Models.dl
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Debug\Newtonsoft.Json.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Debug\StackExchange.Redis.StrongName.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Debug\Models.pdb
-D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Debug\EntityFramework.xml
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Debug\Newtonsoft.Json.xml
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Debug\StackExchange.Redis.StrongName.pdb
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Debug\StackExchange.Redis.StrongName.xml

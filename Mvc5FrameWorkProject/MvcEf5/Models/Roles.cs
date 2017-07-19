@@ -9,7 +9,7 @@ namespace Models
     /// <summary>
     /// 角色表
     /// </summary>
-    public class Roles : BaseList
+    public class Roles : IEntityInterface
     {
         public int id { get; set; }
         public string rolename { get; set; }

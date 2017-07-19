@@ -47,6 +47,7 @@
     <Compile Include="BaseInterface\IEntityMapper.cs" />
     <Compile Include="BaseList.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="IEntityInterface.cs" />
     <Compile Include="Loger.cs" />
     <Compile Include="LoginResult.cs" />
     <Compile Include="Maps\RolesMap.cs" />

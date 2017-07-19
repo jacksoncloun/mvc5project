@@ -16,7 +16,7 @@ namespace Models.Maps
             this.ToTable("Users");
             this.HasKey(a => a.id);
 
-            HasRequired(r => r.Roles).WithMany().HasForeignKey(r => r.roleid);//Map(m => m.ToTable("Roles"));
+            //HasRequired(r => r.Roles).WithMany().HasForeignKey(r => r.roleid);//Map(m => m.ToTable("Roles"));
         }
         public void RegistTo(ConfigurationRegistrar configurations)
         {

@@ -8,12 +8,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Models
 {
-    public class UserRoles
+    public class UserRoles : IEntityInterface
     {
         public int id { get; set; }
         public int userId { get; set; }
         public int roleId { get; set; }
-        public virtual Users users { get; set; }
-        public virtual Roles roles { get; set; }
+        //public virtual Users users { get; set; }
+        //public virtual Roles roles { get; set; }
     }
 }

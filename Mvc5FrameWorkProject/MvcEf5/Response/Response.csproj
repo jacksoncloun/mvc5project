@@ -52,8 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonEf\BaseCommonEf.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DbResponse.cs" />
+    <Compile Include="CommonEf\ICommon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Redis\RedisHelper.cs" />
   </ItemGroup>

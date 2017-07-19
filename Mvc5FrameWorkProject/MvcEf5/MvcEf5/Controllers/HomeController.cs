@@ -56,12 +56,20 @@ namespace MvcEf5.Controllers
         [HttpPost]
         public ActionResult Edit(FormCollection entity)
         {
-            //string[] keys = entity.AllKeys;
-            //Users u = new Users();
-            //u.id = (int)keys["id"];
 
+            Users u = _userServices.GetUserById(int.Parse(entity.GetValue("id").AttemptedValue)); //new Users();
+            //u.id = int.Parse(entity.GetValue("id").AttemptedValue);
+            u.username = entity.GetValue("username").AttemptedValue;
+            u.isdelete = entity.GetValue("isdelete").AttemptedValue == "on" ? true : false;
+            u.roleid = int.Parse(entity.GetValue("roleid").AttemptedValue);
+            _userServices.UpdateUser(u);
 
-            return Json(new { Success = true });
+            var user = RedisHelper.GetHashKey<Users>("Users", "Users-Id-" + u.id);
+            user.isdelete = entity.GetValue("isdelete").AttemptedValue == "on" ? true : false;
+            user.username = user.username + "dddddddddddddddddddd";
+            var boo = RedisHelper.SetHashKey<Users>("Users", "Users-Id-" + u.id, user);//重置redis中key-value值
+            //return Json(new { Success = true });
+            return RedirectToAction("Index");
         }
         public ActionResult Del(string N, int id)
         {
@@ -72,10 +80,6 @@ namespace MvcEf5.Controllers
         {
             return Json(new { Success = true });
         }
-
-
-
-
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
