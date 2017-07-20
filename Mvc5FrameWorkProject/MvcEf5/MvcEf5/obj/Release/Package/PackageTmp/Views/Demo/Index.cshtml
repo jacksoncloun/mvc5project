@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="row">
+    <table class="table">
+        <thead class="table-hover">
+            <tr>
+                <td>编号</td>
+                <td>姓名</td>
+                <td>是否删除</td>
+                <td>类别</td>
+            </tr>
+        </thead>
+        <tbody class="tab-content">
+            @foreach (var item in Model as List<Models.Users>)
+            {
+                <tr>
+                    <td>@item.userid</td>
+                    <td>@item.username</td>
+                    <td>@item.isdelete</td>
+                    <td>@item.roleid</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

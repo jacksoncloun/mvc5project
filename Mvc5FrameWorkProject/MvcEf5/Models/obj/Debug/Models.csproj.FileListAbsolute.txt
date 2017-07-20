@@ -16,4 +16,3 @@ D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Models\bin\Debug\EntityFrame
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Models\bin\Debug\zh-Hans\EntityFramework.resources.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Models\obj\Debug\Models.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Models\obj\Debug\Models.pdb
-D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache

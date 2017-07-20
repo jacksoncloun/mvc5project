@@ -5500,6 +5500,7 @@
     <Content Include="assets\pages\scripts\widgets.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Error404.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -5865,6 +5866,7 @@
     <Content Include="Areas\PC\Views\Windowspc\Index.cshtml" />
     <Content Include="Areas\Master\Views\web.config" />
     <Content Include="Areas\Master\Views\MainMaster\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\wbber.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -5908,6 +5910,10 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Home\Edit.cshtml" />
     <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Shared\Error4042.html" />
+    <Content Include="Views\Shared\Error4043.html" />
+    <Content Include="Views\Shared\Error5001.html" />
+    <Content Include="Views\Shared\Error5002.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

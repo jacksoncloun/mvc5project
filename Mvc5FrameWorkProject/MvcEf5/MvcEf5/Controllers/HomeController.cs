@@ -27,6 +27,29 @@ namespace MvcEf5.Controllers
             _redisService.SaveInRedis();
         }
 
+        /// <summary>
+        /// 第一种错误处理机制，控制器继承自BaseController
+        /// 如果页面出错跳转到错误页面  BaseController 中  自动使用basecontroller中的错误处理逻辑 
+        /// 因为继承了 BaseController 控制器
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult ErrorIndex()
+        {
+            //List<Users> model = RedisHelper.HashGetAll<Users>("Users");
+            return View("Index");
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult ErrorIndex2()
+        {
+            var a = "11";
+            var b = "ddddd";
+            var c = int.Parse(a) + int.Parse(b);
+            return View("Index");
+        }
+
         public ActionResult Index()
         {
             List<Users> model = RedisHelper.HashGetAll<Users>("Users");

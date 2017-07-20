@@ -1,0 +1,23 @@
+1、新增类库中设置实体类映射时需要引用当前项目中的packages包中的ef的dll 因为EntityTypeConfiguration的命名空间是：System.Data.Entity.ModelConfiguration
+引用System.ComponentModel.DataAnnotations 
+
+2、MVC中访问Views文件夹里面的静态页面，需要在views的web.config中进行配置
+    <httpHandlers>
+      <add verb="GET,HEAD" path="*.html" type="System.Web.StaticFileHandler"/>   <!--主要是这行代码，一定要放在 HttpNotFoundHandler 之前-->
+      <add path="*" verb="*" type="System.Web.HttpNotFoundHandler"/>
+    </httpHandlers>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Response.Redis;
 using Enums;
 using System.Reflection;
+using System.IO;
 
 namespace MvcEf5.Controllers
 {
@@ -22,6 +23,44 @@ namespace MvcEf5.Controllers
             List<SelectListItem> roleslist = getlistItems(roles);
             ViewBag.Roles = roles;
             ViewBag.RolesList = roleslist;
+        }
+
+        /// <summary>
+        /// 错误处理并且打日志
+        /// 其他所有的Controller继承该BaseController即可
+        /// 在这个Controller中重写OnException方法可以记录日志
+        /// </summary>
+        /// <param name="filterContext"></param>
+        protected override void OnException(ExceptionContext filterContext)
+        {
+            // 此处进行异常记录，可以记录到数据库或文本，也可以使用其他日志记录组件。
+            // 通过filterContext.Exception来获取这个异常。'
+            string directory = @"D:\Temp\";
+            string filePath = directory + @"Exceptions.txt";
+            DirectoryInfo di = new DirectoryInfo(directory);
+            int ar = filterContext.Exception.Message.Length;
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                System.IO.File.Create(filePath, ar, FileOptions.Asynchronous);
+            }
+            else
+            {
+                StreamWriter sw = System.IO.File.AppendText(filePath);
+                sw.WriteLine(filterContext.Exception.Message);
+                sw.Close();
+            }
+            // 执行基类中的OnException
+            //base.OnException(filterContext);
+
+            // 标记异常已处理
+            filterContext.ExceptionHandled = true;
+            // 跳转到错误页
+            filterContext.Result = new RedirectResult("/Views/Shared/Error4043.html");  //Url.Action("Index", "Error")
         }
 
         /// <summary>
@@ -72,5 +111,11 @@ namespace MvcEf5.Controllers
             }
             return "";
         }
+
+
+
+
+
+
     }
 }

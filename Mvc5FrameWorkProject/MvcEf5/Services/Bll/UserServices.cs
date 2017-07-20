@@ -10,7 +10,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Services;
-using Response.CommonEf;
 
 namespace Services.Bll
 {
@@ -56,7 +55,7 @@ namespace Services.Bll
             _db.SaveChanges();
 
 
-            BaseCommonEf<Users> a = new BaseCommonEf<Users>();
+            
 
             
         }

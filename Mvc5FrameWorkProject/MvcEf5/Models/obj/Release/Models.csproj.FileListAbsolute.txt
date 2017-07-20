@@ -1,0 +1,7 @@
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Models\bin\Release\Models.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Models\bin\Release\Models.pdb
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Models\bin\Release\EntityFramework.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Models\bin\Release\EntityFramework.xml
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Models\bin\Release\zh-Hans\EntityFramework.resources.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Models\obj\Release\Models.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Models\obj\Release\Models.pdb

@@ -169,6 +169,7 @@ D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\MvcEf5.pdb
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Antlr3.Runtime.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\EntityFramework.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\EntityFramework.SqlServer.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Enums.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Microsoft.AspNet.Identity.Core.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Microsoft.AspNet.Identity.Owin.dll
@@ -196,7 +197,7 @@ D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\System.Web.WebPag
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\System.Web.WebPages.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\System.Web.WebPages.Razor.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\WebGrease.dll
-D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Enums.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Enums.pdb
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Models.pdb
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Response.pdb
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Services.pdb
@@ -225,7 +226,6 @@ D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Microsoft.Owin.Se
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Microsoft.Owin.Security.Google.xml
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\Enums.pdb
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\zh-Hans\System.Web.Helpers.resources.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\zh-Hans\System.Web.Mvc.resources.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\zh-Hans\System.Web.Optimization.resources.dll

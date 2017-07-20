@@ -1,0 +1,15 @@
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Release\Response.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Release\Response.pdb
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Release\EntityFramework.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Release\Models.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Release\Newtonsoft.Json.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Release\StackExchange.Redis.StrongName.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Release\Models.pdb
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Release\EntityFramework.xml
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Release\Newtonsoft.Json.xml
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Release\StackExchange.Redis.StrongName.pdb
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Release\StackExchange.Redis.StrongName.xml
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\bin\Release\zh-Hans\EntityFramework.resources.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\obj\Release\Response.csprojResolveAssemblyReference.cache
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\obj\Release\Response.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Response\obj\Release\Response.pdb

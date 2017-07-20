@@ -1,0 +1,5 @@
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Enums\bin\Release\Enums.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Enums\bin\Release\Enums.pdb
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Enums\obj\Release\Enums.csprojResolveAssemblyReference.cache
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Enums\obj\Release\Enums.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\Enums\obj\Release\Enums.pdb

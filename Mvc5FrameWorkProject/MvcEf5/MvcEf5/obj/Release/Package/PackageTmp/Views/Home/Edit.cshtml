@@ -1,0 +1,50 @@
+﻿@model Models.Users
+@{
+    ViewBag.Title = "Edit Page";
+    var roles = ViewBag.Roles as List<Models.Roles>;
+    var roleslist = ViewBag.RolesList as List<SelectListItem>;
+}
+
+<div class="page-container" style="margin-top:100px;">
+    <form action="/Home/Edit" method="post">
+        <div class="form-body">
+            <div class="form-group">
+                <label>编号：@(Model.id)</label>
+                <input type="hidden" name="id" value="@(Model.id)" />                
+            </div>
+            <div class="form-group">
+                <label>姓名</label>
+                <div class="input-group">
+                    <span class="input-group-addon input-circle-left">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                    <input type="text" name="username" class="form-control" value="@(Model.username)" placeholder="姓名">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>是否停用</label>
+                <div class="col-md-12">
+                    <div class="mt-checkbox-list">
+                        <label class="mt-checkbox mt-checkbox-outline">
+                            <input type="checkbox" name="isdelete" class="form-control" @(Model.isdelete ? "checked='checked'" : "")> 停用
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>角色</label>
+                <div class="input-group">
+                    <span class="input-group-addon input-circle-left">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                    @Html.DropDownList("roleid", roleslist, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn blue">保存</button>
+            <a href="/Home/Index" class="btn default">取消</a>
+        </div>
+    </form>
+</div>

@@ -82,7 +82,7 @@ namespace Response.CommonEf
             return _db.Set<T>().ToList();
         }
     }
-    public class Hvi : BaseCommonEf<Hvi>
+    public class Hvi : BaseCommonEf<Hvi>, IEntityInterface
     {
         public Hvi()
         { 
