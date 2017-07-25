@@ -7,7 +7,7 @@ using System.Web.Mvc;
 namespace MvcEf5.Controllers
 {
     //[HandleError(ExceptionType = typeof(System.Data.DataException), View = "Error5002.cshtml")]
-    public class ErrorController : BaseController
+    public class ErrorController : Controller
     {
         //
         // GET: /Error/
@@ -20,10 +20,15 @@ namespace MvcEf5.Controllers
         /// 
         /// </summary>
         /// <returns></returns>
-        //[HandleError(ExceptionType=typeof(System.Data.DataException),View="Error5002.cshtml")]
+        //[HandleError(ExceptionType = typeof(System.Data.DataException), View = "Error5002.cshtml")]
         public ActionResult ErrorIndex2()
         {
-            return View("Index2");
+            //return View("Index2");
+            throw new Exception("This is Error");
+        }
+        public ActionResult Error5002()
+        {
+            return View();
         }
 	}
 }

@@ -60,7 +60,11 @@ namespace MvcEf5.Controllers
             // 标记异常已处理
             filterContext.ExceptionHandled = true;
             // 跳转到错误页
-            filterContext.Result = new RedirectResult("/Views/Shared/Error4043.html");  //Url.Action("Index", "Error")
+            filterContext.Result = new RedirectResult("/Views/Shared/Error4043.html");  
+            //Url.Action("Index", "Error")   
+            //可以通过throw new excption当控制器错误信息出现的时候指定错误信息返回到这里    
+            //可以将ErrorController中的这个错误页面的视图方法多加一个参数,将上面的错误信息传递到error的方法里面就可以在页面上直接显示出来    
+            //可以用枚举进行判断消息是我们自定义的消息或者是系统出错,来判断是否可以显示错误信息在页面上
         }
 
         /// <summary>

@@ -5910,10 +5910,9 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Home\Edit.cshtml" />
     <Content Include="Views\Error\Index.cshtml" />
-    <Content Include="Views\Shared\Error4042.html" />
     <Content Include="Views\Shared\Error4043.html" />
-    <Content Include="Views\Shared\Error5001.html" />
-    <Content Include="Views\Shared\Error5002.html" />
+    <Content Include="Views\Error\Error5002.cshtml" />
+    <None Include="Views\Shared\Error5002.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

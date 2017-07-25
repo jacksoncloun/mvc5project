@@ -36,7 +36,8 @@ namespace MvcEf5.Controllers
         public ActionResult ErrorIndex()
         {
             //List<Users> model = RedisHelper.HashGetAll<Users>("Users");
-            return View("Index");
+            //return View("Index");
+            throw new Exception("This is Test Error");
         }
         /// <summary>
         /// 
@@ -116,5 +117,11 @@ namespace MvcEf5.Controllers
 
             return View();
         }
+
+
+
+
+         
     }
+
 }
