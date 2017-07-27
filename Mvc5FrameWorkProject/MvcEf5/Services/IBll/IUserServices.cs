@@ -12,5 +12,6 @@ namespace Services.IBll
         List<Users> getAlluser();
         void UpdateUser(Users entity);
         Users GetUserById(int id);
+        void DeleteUser(int id);
     }
 }

@@ -77,26 +77,29 @@ namespace MvcEf5.Controllers
                 return RedirectToAction("Index", "Error");
             }
         }
-        [HttpPost]
+        /// <summary>
+        /// 修改操作，不仅修改数据库中的数据值，还需要修改存储在redis中的数据值
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        [HttpPost]        
         public ActionResult Edit(FormCollection entity)
         {
 
             Users u = _userServices.GetUserById(int.Parse(entity.GetValue("id").AttemptedValue)); //new Users();
             //u.id = int.Parse(entity.GetValue("id").AttemptedValue);
             u.username = entity.GetValue("username").AttemptedValue;
-            u.isdelete = entity.GetValue("isdelete").AttemptedValue == "on" ? true : false;
+            u.isdelete = entity.GetValue("isdelete") == null ? false : true;  // .AttemptedValue == "on" ? true : false;
             u.roleid = int.Parse(entity.GetValue("roleid").AttemptedValue);
             _userServices.UpdateUser(u);
-
-            var user = RedisHelper.GetHashKey<Users>("Users", "Users-Id-" + u.id);
-            user.isdelete = entity.GetValue("isdelete").AttemptedValue == "on" ? true : false;
-            user.username = user.username + "dddddddddddddddddddd";
-            var boo = RedisHelper.SetHashKey<Users>("Users", "Users-Id-" + u.id, user);//重置redis中key-value值
-            //return Json(new { Success = true });
+             
             return RedirectToAction("Index");
         }
         public ActionResult Del(string N, int id)
         {
+            EntitiesNames en = new EntitiesNames();
+            var currClassname = getClassNames<EntitiesNames>(N, en, int.Parse(N));  //这里获取了类的名称，将返回值修改为返回类名
+            _userServices.DeleteUser(id);
             return View();
         }
         [HttpPost]
@@ -121,7 +124,7 @@ namespace MvcEf5.Controllers
 
 
 
-         
+
     }
 
 }

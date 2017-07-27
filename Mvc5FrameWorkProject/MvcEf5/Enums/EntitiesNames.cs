@@ -8,7 +8,7 @@ namespace Enums
 {
     public enum EntitiesNames
     {
-        Users=1,
+        Users = 1,
         Roles=2,
         UserRoles=3
     }

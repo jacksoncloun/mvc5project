@@ -94,21 +94,21 @@ namespace MvcEf5.Controllers
         /// 如枚举  张三=1,李四=2,王五=3   含义：名称=value值   调用该方法传参2-type传参0返回李四  调用该方法传参李四-type=1返回字符串2
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="bi">默认value值,则取出名称</param>
-        /// <param name="en">枚举类</param>
+        /// <param name="cva">默认value值,则取出名称,也可传入名称返回value值</param>
+        /// <param name="entity">枚举类</param>
         /// <param name="type">0传入value值并返回名称   1传入名称返回value值</param>
         /// <returns></returns>
-        public string getClassNames<T>(string bi, T en, int type = 0)
+        public string getClassNames<T>(string cva, T entity, int type = 0)
         {
-            Type tp = en.GetType();
+            Type tp = entity.GetType();
             Array pproperty = tp.GetEnumValues();
             foreach (object item in pproperty)
             {
-                if (type == 0 && (int)item == int.Parse(bi))
+                if (type == 0 && (int)item == int.Parse(cva))
                 {
                     return item.ToString();         //返回枚举的名称
                 }
-                if (type == 1 && item.ToString() == bi)
+                if (type == 1 && item.ToString() == cva)
                 {
                     return ((int)item).ToString();  //返回枚举的值
                 }

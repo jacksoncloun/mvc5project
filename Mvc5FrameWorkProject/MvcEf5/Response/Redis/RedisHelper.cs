@@ -148,7 +148,7 @@ namespace Response.Redis
             return default(T);
         }
         /// <summary>
-        /// 获取Hash中的单个key的值
+        /// 设置Hash中的单个key的值
         /// </summary>
         /// <typeparam name="T">需要修改这个对象</typeparam>
         /// <param name="key">需要修改的key值</param>

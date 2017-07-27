@@ -5,6 +5,7 @@ using Services.IBll;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Core;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
@@ -30,15 +31,13 @@ namespace Services.Bll
         }
         public Users GetUserById(int id)
         {
-            //BaseCommonEf<Users> _basece = new List<Users>();
-            //var enti = _basece.Find(id);
-            //return enti;
-            return null;
+            return _db.Users.Where(a => a.id == id).FirstOrDefault();
+            //return null;
         }
 
         public void UpdateUser(Users entity)
         {
-            #region
+            #region 使用这种方法如果这个实体中有一些数据默认为空值，那么也会默认保存进数据库
             //DbEntityEntry entry = _db.Entry<Users>(entity);
             //if (entry.State == EntityState.Detached)
             //{
@@ -49,15 +48,28 @@ namespace Services.Bll
             //} 
             #endregion
 
-
-            //_db.Set<Users>().Attach(entity);
-            //_db.Entry<Users>(entity).State = EntityState.Modified;
             _db.SaveChanges();
+            entity.username = entity.username + "rrrrrrrr";
+            var boo = RedisHelper.SetHashKey<Users>("Users", "Users-Id-" + entity.id, entity);//重置redis中key-value值
+            //Redis中存储的是  [Users:[Users-id-1:{},Users-id-2:{},Users-id-3:{}]]  这种格式，所以需要修改设置的是  Users对应的 Users-id-3 这个键的值
+        }
+
+        public void DeleteUser(int id)
+        {
+            #region 删除1直接使用sql进行删除
+            using (var md = new DbResponse())
+            {
+                
+            }
+            #endregion
 
 
+
+
+            RedisHelper.DeleteHase("Users", "Users-Id-" + id);
             
-
-            
+            _db.Users.Remove(_db.Users.Where(a => a.id == id).FirstOrDefault());
+            //_db.SaveChanges();
         }
     }
 }

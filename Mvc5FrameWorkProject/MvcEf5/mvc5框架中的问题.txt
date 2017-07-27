@@ -1,3 +1,7 @@
+导引：Redis服务器文件和Redis客户端文件已经在项目根目录
+
+
+
 1、新增类库中设置实体类映射时需要引用当前项目中的packages包中的ef的dll 因为EntityTypeConfiguration的命名空间是：System.Data.Entity.ModelConfiguration
 引用System.ComponentModel.DataAnnotations 
 
