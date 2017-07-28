@@ -27,6 +27,7 @@ namespace MvcEf5.Controllers
             _redisService.SaveInRedis();
         }
 
+        #region 错误处理
         /// <summary>
         /// 第一种错误处理机制，控制器继承自BaseController
         /// 如果页面出错跳转到错误页面  BaseController 中  自动使用basecontroller中的错误处理逻辑 
@@ -50,19 +51,27 @@ namespace MvcEf5.Controllers
             var c = int.Parse(a) + int.Parse(b);
             return View("Index");
         }
+        #endregion
 
         public ActionResult Index()
         {
             List<Users> model = RedisHelper.HashGetAll<Users>("Users");
             return View(model);
         }
+
+        #region session clear
+        /// <summary>
+        /// 清理掉session 验证控制器的是否已登录的权限验证
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Clear()
         {
             WebSession.SessionClear();
             return RedirectToAction("Index", "Home");
         }
-
-
+        
+        #endregion
+        #region 编辑以及保存 
         public ActionResult Edit(string N, int id)
         {
             EntitiesNames en = new EntitiesNames();
@@ -82,7 +91,7 @@ namespace MvcEf5.Controllers
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        [HttpPost]        
+        [HttpPost]
         public ActionResult Edit(FormCollection entity)
         {
 
@@ -92,9 +101,10 @@ namespace MvcEf5.Controllers
             u.isdelete = entity.GetValue("isdelete") == null ? false : true;  // .AttemptedValue == "on" ? true : false;
             u.roleid = int.Parse(entity.GetValue("roleid").AttemptedValue);
             _userServices.UpdateUser(u);
-             
+
             return RedirectToAction("Index");
-        }
+        } 
+        #endregion
         public ActionResult Del(string N, int id)
         {
             EntitiesNames en = new EntitiesNames();

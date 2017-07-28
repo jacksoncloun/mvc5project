@@ -57,19 +57,14 @@ namespace Services.Bll
         public void DeleteUser(int id)
         {
             #region 删除1直接使用sql进行删除
-            using (var md = new DbResponse())
-            {
-                
-            }
-            #endregion
-
-
-
-
+            //using (var md = new DbResponse())
+            //{
+            //    md.Database.ExecuteSqlCommand("Delete * from Users where id=" + id);
+            //}
+            #endregion 
             RedisHelper.DeleteHase("Users", "Users-Id-" + id);
-            
             _db.Users.Remove(_db.Users.Where(a => a.id == id).FirstOrDefault());
-            //_db.SaveChanges();
+            _db.SaveChanges();
         }
     }
 }
