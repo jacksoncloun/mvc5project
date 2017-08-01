@@ -10,6 +10,7 @@ using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 
@@ -69,9 +70,9 @@ namespace MvcEf5.Controllers
             WebSession.SessionClear();
             return RedirectToAction("Index", "Home");
         }
-        
+
         #endregion
-        #region 编辑以及保存 
+        #region 编辑以及保存
         public ActionResult Edit(string N, int id)
         {
             EntitiesNames en = new EntitiesNames();
@@ -103,19 +104,44 @@ namespace MvcEf5.Controllers
             _userServices.UpdateUser(u);
 
             return RedirectToAction("Index");
-        } 
+        }
         #endregion
-        public ActionResult Del(string N, int id)
+
+        #region 公共删除方法
+        public ActionResult CommonDel(string N, int id)
         {
             EntitiesNames en = new EntitiesNames();
-            var currClassname = getClassNames<EntitiesNames>(N, en, int.Parse(N));  //这里获取了类的名称，将返回值修改为返回类名
-            _userServices.DeleteUser(id);
+            var currClassname = getClassNames<EntitiesNames>(N, en, 0);  //这里获取了类的名称，将返回值修改为返回类名         
+            Assembly[] AssbyCustmList = System.AppDomain.CurrentDomain.GetAssemblies();//查找所有的程序集
+            foreach (Assembly item in AssbyCustmList)
+            {
+                var b = item.FullName;
+                var e = item.GetType();
+                var f = item.GetTypes();
+                var g = item.Modules;
+                var h = item.GetManifestResourceNames();                
+                var items = item.GetTypes().Where(a => a.Name == "Users").FirstOrDefault(); //程序集里面的对象
+                if (items != null)
+                {
+                    var c = item.GetTypes().Where(a => a.Name == "Users");
+                    var d = item.CreateInstance("Models.Users");
+                }
+            }
+            //var AssemblyList = Assembly.GetCallingAssembly();
+
+            string assemblyname = "";
+            Assembly.LoadFrom(assemblyname);
+
+            //_userServices.DeleteUser(id);
             return View();
         }
-        [HttpPost]
-        public ActionResult Del(FormCollection entity)
+        #endregion
+
+        #region
+        public ActionResult Del(int id)
         {
-            return Json(new { Success = true });
+            _userServices.DeleteUser(id);
+            return View();
         }
         public ActionResult About()
         {
@@ -130,11 +156,64 @@ namespace MvcEf5.Controllers
 
             return View();
         }
+        #endregion
 
 
 
 
 
     }
+
+    #region C# 利用反射根据类名创建类的实例对象
+    /// <summary>
+    /// 反射帮助类
+    /// </summary>
+    public static class ReflectionHelper
+    {
+        /// <summary>
+        /// 创建对象实例
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="fullName">命名空间.类型名</param>
+        /// <param name="assemblyName">程序集</param>
+        /// <returns></returns>
+        public static T CreateInstance<T>(string fullName, string assemblyName)
+        {
+            string path = fullName + "," + assemblyName;//命名空间.类型名,程序集
+            Type o = Type.GetType(path);//加载类型
+            object obj = Activator.CreateInstance(o, true);//根据类型创建实例
+            return (T)obj;//类型转换并返回
+        }
+
+        /// <summary>
+        /// 创建对象实例
+        /// </summary>
+        /// <typeparam name="T">要创建对象的类型</typeparam>
+        /// <param name="assemblyName">类型所在程序集名称</param>
+        /// <param name="nameSpace">类型所在命名空间</param>
+        /// <param name="className">类型名</param>
+        /// <returns></returns>
+        public static T CreateInstance<T>(string assemblyName, string nameSpace, string className)
+        {
+            try
+            {
+                string fullName = nameSpace + "." + className;//命名空间.类型名
+                //此为第一种写法
+                object ect = Assembly.Load(assemblyName).CreateInstance(fullName);//加载程序集，创建程序集里面的 命名空间.类型名 实例
+                return (T)ect;//类型转换并返回
+                //下面是第二种写法
+                //string path = fullName + "," + assemblyName;//命名空间.类型名,程序集
+                //Type o = Type.GetType(path);//加载类型
+                //object obj = Activator.CreateInstance(o, true);//根据类型创建实例
+                //return (T)obj;//类型转换并返回
+            }
+            catch
+            {
+                //发生异常，返回类型的默认值
+                return default(T);
+            }
+        }
+    }
+    #endregion
 
 }
