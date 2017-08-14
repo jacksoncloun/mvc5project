@@ -9,6 +9,7 @@ using Services.IBll;
 using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Reflection;
 using System.Web;
@@ -72,6 +73,7 @@ namespace MvcEf5.Controllers
         }
 
         #endregion
+
         #region 编辑以及保存
         public ActionResult Edit(string N, int id)
         {
@@ -119,7 +121,7 @@ namespace MvcEf5.Controllers
                 var e = item.GetType();
                 var f = item.GetTypes();
                 var g = item.Modules;
-                var h = item.GetManifestResourceNames();                
+                var h = item.GetManifestResourceNames();
                 var items = item.GetTypes().Where(a => a.Name == "Users").FirstOrDefault(); //程序集里面的对象
                 if (items != null)
                 {
@@ -127,13 +129,27 @@ namespace MvcEf5.Controllers
                     var d = item.CreateInstance("Models.Users");
                 }
             }
-            //var AssemblyList = Assembly.GetCallingAssembly();
-
             string assemblyname = "";
             Assembly.LoadFrom(assemblyname);
 
             //_userServices.DeleteUser(id);
             return View();
+        }
+
+
+        public ActionResult a()
+        {
+            DbResponse _db = new DbResponse();
+            var d = _db.Users.Where(a => a.username.Contains("l")).Sum(e => e.id);
+            var dddd = _db.Database.Log;
+            //try
+            //{
+            //    var psql = d.GetType().GetMethod("ToTraceString").Invoke(d, null);
+            //}
+            //catch
+            //{ }
+            //var c = d;
+            return null;
         }
         #endregion
 
@@ -160,7 +176,21 @@ namespace MvcEf5.Controllers
 
 
 
+        public ActionResult Tolist()
+        {
+            using (var _db = new Dbresponse2())
+            {
+                var cona = (from a in _db.Users
+                             where a.username.Contains("l")
+                             select a).AsEnumerable();
 
+                //var cona = _db.Users.Where(a => a.username.Contains("l")).ToList();
+
+                var conb = cona.Count();
+                var conc = cona.Sum(m => m.id);
+            }
+            return Content("");
+        }
 
     }
 
