@@ -179,6 +179,7 @@
     <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LocalController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Filter\SupportFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -5934,6 +5935,7 @@
     <Folder Include="Views\AlipayLogin\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Default1\" />
+    <Folder Include="Views\Local\" />
     <Folder Include="Views\Pclogin\" />
   </ItemGroup>
   <ItemGroup>
@@ -5944,6 +5946,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommonLib\CommonLib.csproj">
+      <Project>{c578ddb6-d0cf-4f9b-bcc6-e9bc3f33605b}</Project>
+      <Name>CommonLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Enums\Enums.csproj">
       <Project>{c2938c29-af93-4c27-9a3f-9920ec85673e}</Project>
       <Name>Enums</Name>

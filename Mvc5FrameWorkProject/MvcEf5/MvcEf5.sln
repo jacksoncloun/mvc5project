@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enums", "Enums\Enums.csproj", "{C2938C29-AF93-4C27-9A3F-9920EC85673E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLib", "CommonLib\CommonLib.csproj", "{C578DDB6-D0CF-4F9B-BCC6-E9BC3F33605B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C2938C29-AF93-4C27-9A3F-9920EC85673E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2938C29-AF93-4C27-9A3F-9920EC85673E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2938C29-AF93-4C27-9A3F-9920EC85673E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C578DDB6-D0CF-4F9B-BCC6-E9BC3F33605B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C578DDB6-D0CF-4F9B-BCC6-E9BC3F33605B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C578DDB6-D0CF-4F9B-BCC6-E9BC3F33605B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C578DDB6-D0CF-4F9B-BCC6-E9BC3F33605B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

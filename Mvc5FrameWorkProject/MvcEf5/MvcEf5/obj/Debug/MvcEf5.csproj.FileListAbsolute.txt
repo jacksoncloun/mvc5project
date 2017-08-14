@@ -248,3 +248,11 @@ D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\zh-Hans\Microsoft
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\obj\Debug\MvcEf5.csprojResolveAssemblyReference.cache
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\obj\Debug\MvcEf5.dll
 D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\obj\Debug\MvcEf5.pdb
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\CommonLib.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\System.Web.Http.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\System.Net.Http.Formatting.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\CommonLib.pdb
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\System.Web.Http.xml
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\System.Net.Http.Formatting.xml
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\zh-Hans\System.Web.Http.resources.dll
+D:\Projects\mvc5project\Mvc5FrameWorkProject\MvcEf5\MvcEf5\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
